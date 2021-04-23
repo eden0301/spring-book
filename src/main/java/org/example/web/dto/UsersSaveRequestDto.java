@@ -9,15 +9,18 @@ import org.example.domain.users.Users;
 @NoArgsConstructor
 public class UsersSaveRequestDto {
   private String name;
+  private Integer age;
 
   @Builder
-  public UsersSaveRequestDto(String name) {
+  public UsersSaveRequestDto(String name, Integer age) {
     this.name = name;
+    this.age = age;
   }
 
   public Users toEntity() {
     return Users.builder()
                 .name(name)
+                .age(age)
                 .build();
   }
 }

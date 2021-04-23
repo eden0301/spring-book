@@ -3,6 +3,7 @@ package org.example.domain.posts;
 import lombok.Builder;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
+import org.example.domain.BaseTimeEntity;
 
 import javax.persistence.*;
 
@@ -10,7 +11,7 @@ import javax.persistence.*;
 @NoArgsConstructor // 기본 생성자 자동 추가
 @Entity
 // Entity 클래스에서는 절대 'setter'를 만들지 않음
-public class Posts { // DB와 매칭될 클래스 == Entity 클래스
+public class Posts extends BaseTimeEntity { // DB와 매칭될 클래스 == Entity 클래스
 
   @Id
   @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -37,5 +38,9 @@ public class Posts { // DB와 매칭될 클래스 == Entity 클래스
   public void update(String title, String content) {
     this.title = title;
     this.content = content;
+  }
+
+  public void delete(Long id) {
+    this.id = id;
   }
 }

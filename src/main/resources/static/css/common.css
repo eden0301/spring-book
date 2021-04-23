@@ -1,0 +1,19 @@
+tr, td {
+    vertical-align: middle;
+}
+.btn.btn1 {
+    padding: 0 10px;
+}
+.btn.btn1:hover {
+    background: lightslategray;
+    color: #fff;
+    border-radius: 5px;
+}
+.stringcut {
+    border: none;
+    display: block;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    width: 250px;
+}

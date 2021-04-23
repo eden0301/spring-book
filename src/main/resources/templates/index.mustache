@@ -1,12 +1,69 @@
-<html>
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport"
-        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>스프링 부트 웹서비스</title>
-</head>
-<body>
-  <h1>스프링 부트로 시작하는 웹 서비스</h1>
-</body>
-</html>
+{{>layout/header}}
+<link rel="stylesheet" href="css/common.css">
+
+<h1>스프링 부트로 시작하는 웹 서비스 Ver.2</h1>
+
+  <div class="row g-3" style="padding: 0 8px;">
+    <div class="col-sm-8">
+      <a href="/posts/save" role="button" class="btn btn-primary float-end mb-2">글 등록</a>
+      <!-- 게시글 목록 출력 -->
+      <table class="table table-horizontal table-bordered mt-3 text-center">
+        <thead class="thead-strong">
+        <tr>
+          <th class="col-md-1">번호</th>
+          <th class="col-md-1">작성자</th>
+          <th class="col-md-2">제목</th>
+          <th class="col-md-4">내용</th>
+          <th class="col-md-2">최종수정일</th>
+          <th class="col-md-2">관리</th>
+        </tr>
+        </thead>
+        <tbody id="tbody">
+        {{#posts}}
+          <tr>
+            <td>{{id}}</td>
+            <td>{{author}}</td>
+            <td style="text-align: left">{{title}}</td>
+            <td style="text-align: left;"><span class="stringcut">{{content}}</span></td>
+            <td>{{updatedDate}}</td>
+            <td>
+              <button onclick="location.href='/posts/update/{{id}}'" class="btn btn1 me-1">수정</button>
+              <button id="delete-btn" class="btn btn1">삭제</button>
+            </td>
+          </tr>
+          <input type="hidden" value="{{id}}" id="post_id">
+        {{/posts}}
+        </tbody>
+      </table>
+    </div>
+
+    <div class="col-sm-4">
+      <a href="/users/insert" role="button" class="btn btn-primary float-end mb-2">유저 등록</a>
+      <!--유저 목록 출력-->
+      <table class="table table-horizontal table-bordered mt-3 text-center">
+        <thead class="thead-strong">
+        <tr>
+          <th>번호</th>
+          <th>이름</th>
+          <th>나이</th>
+          <th>최종수정일</th>
+          <th>관리</th>
+        </tr>
+        </thead>
+        <tbody id="tbody">
+        {{#users}}
+          <tr>
+            <td>{{id}}</td>
+            <td>{{name}}</td>
+            <td>{{age}}</td>
+            <td>{{updatedDate}}</td>
+            <td><button class="btn btn1">수정</button></td>
+          </tr>
+        {{/users}}
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
+
+{{>layout/footer}}
