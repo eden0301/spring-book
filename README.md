@@ -7,7 +7,7 @@
 > Springboot simple project
 > (현재 local 동작 상태, AWS EC2 세팅 중, AWS RDS 연결 중)
 
-## Version
+## Requirements
 * Java 8.0
 * Springboot 2.1.7
 * JUnit4
@@ -20,12 +20,17 @@
 * JPA Auditing : 생성 및 수정 시간 관리
 * OAuth 2.0 : 구글 및 네이버 로그인 -->
 
+<!-- ## App Structure -->
+<!-- ## List of API Endpoints -->
+
 ## Features
 * 게시판 기능 (Posts)
   * 게시글 조회
   * 게시글 등록
   * 게시글 수정
   * 게시글 삭제
+
+<!-- ## Screens -->
 
 ## Author
 👤 **HaYoung Ko**
