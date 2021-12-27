@@ -28,7 +28,7 @@
   * 게시글 삭제
 
 ## Author
-👤 **HaYoung Eden Ko**
+👤 **HaYoung Ko**
 
 * Github: [@edenko](https://github.com/edenko)
 * email: goodeden3@gmail.com
