@@ -31,7 +31,4 @@
 👤 **HaYoung Eden Ko**
 
 * Github: [@edenko](https://github.com/edenko)
-
-***
-
-_This README was generated with ❤️ by [readme-md-generator](https://github.com/kefranabg/readme-md-generator)_
+* email: goodeden3@gmail.com
